@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Page</title>
+    <style> </style>
+
+    <script>
+        console.log("Intrduction of java Script")
+         var a;//variable decleration
+         console.log(a)
+         console.log (typeof(a))
+         
+         //var variable name
+
+        a="java script" //intialization
+        console.log(a)
+        console.log (typeof(a))
+
+         var b;
+
+         b= 10;
+         console.log(b)
+
+         a=10;
+         console.log(a)
+         console.log (typeof(a))
+
+         a=10.20
+         console.log (typeof(a))
+
+         a='j'
+         console.log(a)
+         console.log (typeof(a))
+
+         a=true
+         console.log(a)
+         console.log (typeof(a))
+
+        //DataType -
+       // string ,
+       // number, 
+       // boolean ,
+        //undefined
+
+        let c
+        console.log(c)
+
+        //what is difference between var and let
+             var a
+             console.log(a)
+
+          let d
+          console.log(d)   
+
+          console.log("")
+            console.log('')
+
+          //Function in Js -javascript
+          //what is clint side
+        
+         // function functionName(){
+
+        //  }
+
+        //interview qustions 
+        //stackoverflow
+
+            //function 1
+        function dispaly(){
+            console.log("Introduction faunction in javascript before decleraing")
+          
+        }
+        
+        dispaly()
+
+        console.log("Intrduction of java Script")
+        document.write("Intrduction of java Script");
+        document.write("<h1>Intrduction of java Script</h1>")
+        document.write("<h2>Intrduction of java Script</h2>")
+        document.write("<h3>Intrduction of java Script</h3>")
+        document.write("<h4>Intrduction of java Script</h4>")
+        document.write("<h5>Intrduction of java Script</h5>")
+        document.write("<h6>Intrduction of java Script</h6>")
+
+
+
+
+
+        //function 2 pop-up dispaly scripts
+
+     // alert("calling print satatment")
+
+      //  confirm("after this class are you attending presentation")
+
+    //   let result = confirm("after this calss are you attending presentation")
+    //   console.log(result)
+
+
+       let res = prompt("lokesh")
+        console.log(res)
+        document.write(res)
+
+       if(res == 'lokesh'){
+        document.write('<br>'+ res)
+       }else{
+        document.write('<br>',"javascript")
+       }
+
+       // How to pass argument to function in js
+
+       function add(a , b)
+       {
+        console.log("calling display")
+        document.write(a+b)
+       }
+       add(10,20)
+       add(20,30)
+       document.write("<br>")
+      //How to return data from function is js
+
+      function sub(a , b){
+        return a-b
+      }
+      let res1=sub(20,10)
+      console.log(res1)
+      document.write(res1)
+      document.write("<br>")
+      //how to declare constant in js
+
+      const p1=3.14
+      console.log(p1)
+      document.write("<br>")  
+      //print star pattren in js
+
+      function starPattern()
+      {
+        for(let i=0;i<3;i++){
+
+for(let j=0;j<=i;j++){
+    document.write("*")
+}
+document.write("<br>")
+}
+
+document.write("<br>")  
+
+for(let i=1;i<=3;i++){
+for(let j=3;j>=i;j--){
+    document.write("*")
+}
+document.write("<br>") 
+}
+      }
+
+      
+
+      //Event Handling
+      //onclick ,onmouseover
+      
+        //web ,java, database
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+           
+    <button onclick="starPattern()">print star pattren</button> 
+    <button onmouseover="starPattern()">print star pattren</button>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidation</title>
+
+    <script>
+        function validate(){
+            console.log("calling validate")
+            let firstName = document.getElementById("firstName")
+            console.log(firstName.value)
+            console.log(firstName.value.length)
+
+            if(firstName.value == ""){
+                console.log("Please enter Firstname")
+                let message =document.getElementById("firstNameMassage")
+                message.innerHTML ="Please enter Firstname"
+                message.style.color ='red'
+
+            }
+            if(firstName.value.length =="0"){
+                console.log("please enter FirstName")
+            }
+
+            let password = document.getElementById("password")
+            console.log(password.value)
+            console.log(password.value.length)
+
+            if(password.value == ""){
+                console.log("please Enter password")
+                let message =document.getElementById("passwordMessage")
+                message.innerHTML="please Enter password"
+                message.style.color='red'
+
+            }
+           else if(password.value.length <0 && password.value.length >=8){
+                console.log("please enter password")
+                let message =document.getElementById("passwordMessage")
+                message.innerHTML="please Enter valid password"
+                message.style.color='red'
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+
+    <form>
+        <div>
+            <label>Enter FirstName </label>
+            <input type="text" name="firstName" id="firstName">
+            <span id="firstNameMassage"></span>
+        </div>
+
+
+        <div>
+            <label>Enter Password</label>
+            <input type="number" name="password" id="password">
+            <span id="passwordMessage"></span>
+        </div>
+        <br><br>
+
+      
+
+        <button type="button" onclick="validate()">Register</button>
+    </form>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

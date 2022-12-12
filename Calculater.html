@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+
+    <script>
+         function addition()
+         {
+            let number1=document.getElementById("num1")
+            let number2=document.getElementById("num2")
+            var result =parseInt(number1.value)+parseInt(number2.value)
+            var additionResult=document.getElementById("additionResult")
+            additionResult.innerHTML=result
+            additionResult.style.color="red"
+         }
+
+         function subtraction()
+         {
+            let number3=document.getElementById("num3")
+            let number4=document.getElementById("num4")
+            var result =parseInt(number3.value)-parseInt(number4.value)
+            var subtractResult=document.getElementById("subtractResult")
+            subtractResult.innerHTML=result
+            subtractResult.style.color="red"
+         }
+
+
+
+         function divition()
+         {
+            let number5 =document.getElementById("num5")
+            let number6 =document.getElementById("num6")
+            var result =parseFloat(number5.value)/parseFloat(number6.value)
+            var divisionResult=document.getElementById("divisionResult")
+            divisionResult.innerHTML=result
+            divisionResult.style.color="red"
+
+         }
+
+         function multiplication()
+         {
+            let number7=document.getElementById("num7")
+            console.log(number7)
+            let number8=document.getElementById("num8")
+            console.log(number8)
+            console.log(number7.value)
+            console.log(number8.value)
+            let result=parseFloat(number7.value)*parseFloat(number8.value)
+            console.log(result)
+            var multipationResult=document.getElementById("multipationResult")
+            multipationResult.innerHTML=result
+            multipationResult.style.color="red"
+
+
+
+         }
+
+    </script>
+
+
+</head>
+<body>
+<div>
+    <div>
+        <label>ENTER FIRST NUMBER1</label>
+        <input type="number" id="num1">
+    </div>
+
+    <div>
+        <label>ENTER SECOND NUMBER1</label>
+        <input type="number" id="num2">
+    </div>
+
+    <div>
+        <button onclick="addition()">ADD</button>
+        <div id="additionResult"></div>
+    </div>
+</div> <br><br>
+
+<div>
+    <div>
+        <label>ENTER FIRST NUMBER1</label>
+        <input type="number" id="num3">
+    </div>
+
+    <div>
+        <label>ENTER SECOND NUMBER1</label>
+        <input type="number" id="num4">
+    </div>
+
+    <div>
+        <button onclick="subtraction()">SUBTRCT</button>
+        <div id="subtractResult"></div>
+    </div>
+</div> 
+
+
+<br><br>
+
+<div>
+    <div>
+        <label>ENTER FIRST NUMBER1</label>
+        <input type="number" id="num5">
+    </div>
+
+    <div>
+        <label>ENTER SECOND NUMBER1</label>
+        <input type="number" id="num6">
+    </div>
+
+    <div>
+        <button onclick="divition()">DIVIDE</button>
+        <div id="divisionResult"></div>
+    </div>
+</div> 
+
+
+<br><br>
+<div>
+    <div>
+        <label>ENTER FIRST NUMBER1</label>
+        <input type="number" id="num7">
+    </div>
+
+    <div>
+        <label>ENTER SECOND NUMBER1</label>
+        <input type="number" id="num8">
+    </div>
+
+    <div>
+        <button onclick="multiplication()">MULTIPICATION</button>
+        <div id="multipationResult"></div>
+    </div>
+</div> 
+
+
+
+</body>
+</html>

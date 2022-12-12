@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script>
+        function dispalyData()
+        {
+            console.log("calling dispaly")
+           let message= document.getElementById("message")
+           console.log(message)
+           message.innerHTML ="Calling displayData"
+           message.style.color= "Green"
+
+           
+           
+          
+        }
+
+        function PlayerName1(){
+            let PlayerName1=document.getElementById("PlayerName1")
+           PlayerName1.innerHTML="Virat Kohli"
+           PlayerName1.style.color="blue"
+
+
+        }
+        function PlayerName2(){
+            let PlayerName2=document.getElementById("PlayerName2")
+           PlayerName2.innerHTML="ROHITH SHARMA"
+           PlayerName2.style.color="red"
+
+
+        }
+
+        function PlayerName3(){
+            let PlayerName3=document.getElementById("PlayerName3")
+           PlayerName3.innerHTML="KL RAHUL"
+           PlayerName3.style.color="yellow"
+
+        }
+
+        function PlayerName4(){
+            let PlayerName4=document.getElementById("PlayerName4")
+           PlayerName4.innerHTML="SURAYA KUMAR YADAV"
+           PlayerName4.style.color="ORANGE"
+
+        }
+
+        function PlayerName5(){
+            let PlayerName5=document.getElementById("PlayerName5")
+           PlayerName5.innerHTML="BUMBRA"
+           PlayerName5.style.color="PINK"
+
+        }
+
+        function PlayerName6(){
+            let PlayerName6=document.getElementById("PlayerName6")
+           PlayerName6.innerHTML="shami"
+           PlayerName6.style.color="lightgreen"
+
+        }
+
+        function PlayerName7(){
+            let PlayerName7=document.getElementById("PlayerName7")
+           PlayerName7.innerHTML="buvaneswar kumar"
+           PlayerName7.style.color="purpal"
+
+        }
+
+        function PlayerName8(){
+            let PlayerName8=document.getElementById("PlayerName8")
+           PlayerName8.innerHTML="hardik pandya"
+           PlayerName8.style.color="skyblue"
+
+        }
+
+        function PlayerName9(){
+            let PlayerName9=document.getElementById("PlayerName9")
+           PlayerName9.innerHTML="dinesh kartik"
+           PlayerName9.style.color="black"
+
+        }
+
+        function PlayerName10(){
+            let PlayerName10=document.getElementById("PlayerName10")
+            PlayerName10.innerHTML="jadeja"
+            PlayerName10.style.color="brown"
+        }
+
+        function PlayerName11(){
+            let PlayerName11=document.getElementById("PlayerName11")
+            PlayerName11.innerHTML="shrays iyer"
+            PlayerName11.style.color="vilot"
+        }
+
+
+
+        function detailes(){
+            console.log("calling function")
+            let name=document.getElementById("name")
+            console.log(name)
+            console.log(name.value)
+            let detail =document.getElementById("detail")
+            detail.innerHTML=name.value
+
+
+        }
+
+        function addition(){
+        console.log("Adding Number")
+        var Number1 =document.getElementById("num1") 
+        var Number2 =document.getElementById("num2") 
+        console.log(Number1.value)
+        console.log(Number2.value)
+        var result =parseInt(Number1.value)+parseInt(Number2.value)
+        console.log(result)
+        var additionResult = document.getElementById("additionResult");
+        additionResult.innerHTML=result
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="message">  </div>
+    <button onclick="dispalyData()">Click me</button>
+    <h1>INDIA</h1>
+   
+    <button onclick="PlayerName1()">Player Name 1</button>
+    <div id="PlayerName1"></div>
+
+    <button onclick="PlayerName2()">Player Name 2</button>
+    <div id="PlayerName2"></div>
+
+    <button onclick="PlayerName3()">Player Name 3</button>
+    <div id="PlayerName3"></div>
+
+    <button onclick="PlayerName4()">Player Name 4</button>
+    <div id="PlayerName4"></div>
+
+    <button onclick="PlayerName5()">Player Name 5</button>
+    <div id="PlayerName5"></div>
+
+    <button onclick="PlayerName6()">Player Name 6</button>
+    <div id="PlayerName6"></div>
+
+    <button onclick="PlayerName7()">Player Name 7</button>
+    <div id="PlayerName7"></div>
+
+    <button onclick="PlayerName8()">Player Name 8</button>
+    <div id="PlayerName8"></div>
+
+    <button onclick="PlayerName9()">Player Name 9</button>
+    <div id="PlayerName9"></div>
+
+    <button onclick="PlayerName10()">Player Name 10</button>
+    <div id="PlayerName10"></div>
+
+    <button onclick="PlayerName11()">Player Name 11</button>
+    <div id="PlayerName11"></div>
+
+
+    <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+<form>
+    <div>
+        <label>Enter name</label>
+        <input type="text" id="name">
+
+    </div>
+
+    <button onmouseover="detailes()">Submit</button>
+    <div id="detail"></div>
+</form> 
+<br><br>
+
+  <form>
+    <div>
+        <label>Enter Number1</label>
+        <input type="text" id="num1">
+
+    </div>
+
+    <div>
+        <lable>Enter number2</lable>
+        <input type="text" id="num2">
+
+    </div>
+
+    <button onclick="addition()">Addition</button>
+  </form>
+  
+</body>
+</html>

@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="Css1.css">
     <title>WeSite</title>
 
+    <script>
+
+
+      function popup(){
+       let res = prompt("lokesh")
+        console.log(res)
+        document.write(res)
+
+       if(res == 'lokesh'){
+        document.write('<br>'+ res)
+       }else{
+        document.write('<br>',"javascript")
+       }
+      }
+
+      
+
+
+    </script>
+
 
 </head>
 <body>
@@ -19,7 +39,7 @@
 
 
 
-                <div class="form-group">
+                <div class="form-group" id="username">
                   <label for="email">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                 </div>
@@ -39,7 +59,7 @@
                   </label>
 
                 </div>
-                <button type="submit" class="btn btn-primary btn-block ">Submit</button>
+                <button type="submit" class="btn btn-primary btn-block " onclick="popup()">Submit</button>
                   
                   
                </div>

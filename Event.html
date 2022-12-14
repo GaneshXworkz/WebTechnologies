@@ -14,6 +14,8 @@
            message.innerHTML ="Calling displayData"
            message.style.color= "Green"
 
+          
+
            
            
           
@@ -24,12 +26,30 @@
            PlayerName1.innerHTML="Virat Kohli"
            PlayerName1.style.color="blue"
 
+           let image1=document.createElement("img")
+            image1.src="virat-kohli.jpg"
+            image1.style.width="200px"
+            document.body.appendChild(image1)
+            let lodingimage1=document.getElementById("lodingimage1")
+            lodingimage1.appendChild(image1)
+
+         
+
+
+
 
         }
         function PlayerName2(){
             let PlayerName2=document.getElementById("PlayerName2")
            PlayerName2.innerHTML="ROHITH SHARMA"
            PlayerName2.style.color="red"
+
+           let image=document.createElement("img")
+           image.src="Rohit.jfif"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage2=document.getElementById("lodingimage2")
+           lodingimage2.appendChild(image)
 
 
         }
@@ -39,12 +59,28 @@
            PlayerName3.innerHTML="KL RAHUL"
            PlayerName3.style.color="yellow"
 
+           let image=document.createElement("img")
+           image.src="KL-Rahul.jpg"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage3=document.getElementById("lodingimage3")
+           lodingimage3.appendChild(image)
+
+
+         
         }
 
         function PlayerName4(){
             let PlayerName4=document.getElementById("PlayerName4")
            PlayerName4.innerHTML="SURAYA KUMAR YADAV"
            PlayerName4.style.color="ORANGE"
+
+           let image=document.createElement("img")
+           image.src="Suryakumar_Yadav.jpg"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage4=document.getElementById("lodingimage4")
+           lodingimage4.appendChild(image)
 
         }
 
@@ -53,12 +89,26 @@
            PlayerName5.innerHTML="BUMBRA"
            PlayerName5.style.color="PINK"
 
+           let image=document.createElement("img")
+           image.src="Bumrah.jfif"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage5=document.getElementById("lodingimage5")
+           lodingimage5.appendChild(image)
+
         }
 
         function PlayerName6(){
             let PlayerName6=document.getElementById("PlayerName6")
-           PlayerName6.innerHTML="shami"
+           PlayerName6.innerHTML="MS DHONI"
            PlayerName6.style.color="lightgreen"
+
+           let image =document.createElement("img")
+           image.src="ms-dhoni.jpeg"
+            image.style.width="200px"
+            document.body.appendChild(image)
+            let loadingImage6= document.getElementById("LodingImage6")
+            loadingImage6.appendChild(image)
 
         }
 
@@ -67,12 +117,25 @@
            PlayerName7.innerHTML="buvaneswar kumar"
            PlayerName7.style.color="purpal"
 
+           let image=document.createElement("img")
+           image.src="Buvi.jfif"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage7=document.getElementById("lodingimage7")
+           lodingimage7.appendChild(image)
         }
 
         function PlayerName8(){
             let PlayerName8=document.getElementById("PlayerName8")
            PlayerName8.innerHTML="hardik pandya"
            PlayerName8.style.color="skyblue"
+
+           let image=document.createElement("img")
+           image.src="Hardik.jfif"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage8=document.getElementById("lodingimage8")
+           lodingimage8.appendChild(image)
 
         }
 
@@ -81,21 +144,42 @@
            PlayerName9.innerHTML="dinesh kartik"
            PlayerName9.style.color="black"
 
+           let image=document.createElement("img")
+           image.src="dinesh-karthik.jpg"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage9=document.getElementById("lodingimage9")
+           lodingimage9.appendChild(image)
+
         }
 
         function PlayerName10(){
             let PlayerName10=document.getElementById("PlayerName10")
             PlayerName10.innerHTML="jadeja"
             PlayerName10.style.color="brown"
+
+            let image=document.createElement("img")
+           image.src="Ravindra-Jadeja.jpg"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage10=document.getElementById("lodingimage10")
+           lodingimage10.appendChild(image)
         }
 
         function PlayerName11(){
             let PlayerName11=document.getElementById("PlayerName11")
             PlayerName11.innerHTML="shrays iyer"
             PlayerName11.style.color="vilot"
+
+            let image=document.createElement("img")
+           image.src="Shreyas-Iyer.jpg"
+           image.style.width="200px"
+           document.body.appendChild(image)
+           let lodingimage11=document.getElementById("lodingimage11")
+           lodingimage11.appendChild(image)
         }
 
-
+//*******************************************************************************
 
         function detailes(){
             console.log("calling function")
@@ -128,38 +212,51 @@
     <button onclick="dispalyData()">Click me</button>
     <h1>INDIA</h1>
    
+   
     <button onclick="PlayerName1()">Player Name 1</button>
     <div id="PlayerName1"></div>
+    <div id="lodingimage1"></div>
 
     <button onclick="PlayerName2()">Player Name 2</button>
     <div id="PlayerName2"></div>
+    <div id="lodingimage2"></div>
 
     <button onclick="PlayerName3()">Player Name 3</button>
     <div id="PlayerName3"></div>
+    <div id="lodingimage3"></div>
 
     <button onclick="PlayerName4()">Player Name 4</button>
     <div id="PlayerName4"></div>
+    <div id="lodingimage4"></div>
 
     <button onclick="PlayerName5()">Player Name 5</button>
     <div id="PlayerName5"></div>
+    <div id="lodingimage5"></div>
+
 
     <button onclick="PlayerName6()">Player Name 6</button>
     <div id="PlayerName6"></div>
+    <div id="LodingImage6"></div>
 
     <button onclick="PlayerName7()">Player Name 7</button>
     <div id="PlayerName7"></div>
+    <div id="lodingimage7"></div>
 
     <button onclick="PlayerName8()">Player Name 8</button>
     <div id="PlayerName8"></div>
+    <div id="lodingimage8"></div>
 
     <button onclick="PlayerName9()">Player Name 9</button>
     <div id="PlayerName9"></div>
+    <div id="lodingimage9"></div>
 
     <button onclick="PlayerName10()">Player Name 10</button>
     <div id="PlayerName10"></div>
+    <div id="lodingimage10"></div>
 
     <button onclick="PlayerName11()">Player Name 11</button>
     <div id="PlayerName11"></div>
+    <div id="lodingimage11"></div>
 
 
     <br><br>

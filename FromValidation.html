@@ -24,7 +24,27 @@
             }
             if(firstName.value.length =="0"){
                 console.log("please enter FirstName")
+
             }
+            //*****************************************************************
+
+                console.log("calling function")
+                let email=document.getElementById("email")
+                console.log(email.value)
+                console.log(email.value.length)
+
+                if(email.value == ""){
+                console.log("Please enter Firstname")
+                let message =document.getElementById("emailMassage")
+                message.innerHTML ="Please enter emailId"
+                message.style.color ='red'
+
+            }
+            if(email.value.length =="0"){
+                console.log("please enter email")
+
+            }
+
             //****************************************************************
             let password = document.getElementById("password")
             console.log(password.value)
@@ -37,13 +57,13 @@
                 message.style.color='blue'
 
             }
-           else if(password.value.length <= 8 ){
+           else if(password.value.length <8){
                 console.log("please enter password")
                 let message =document.getElementById("passwordMessage")
                 message.innerHTML=" password must be 8 charcter"
                 message.style.color='blue'
             }
-            else if(password.value.length >8){
+            else if(password.value.length >9){
                 console.log("please enter password")
                 let message =document.getElementById("passwordMessage")
                 message.innerHTML="Passwaord is too long"
@@ -68,9 +88,26 @@
                 genderMessage.style.color ="blue"
 
             }
+
+            let genderData
+            if(document.registraction.gender[0].checked ==true)
+            {
+                genderData=document.registraction.gender[0].value
+            }
+            else if(document.registraction.gender[1].checked ==true)
+            {
+                genderData=document.registraction.gender[1].value
+  
+            }
+            else if(document.registraction.gender[2].checked ==true)
+            {
+                genderData=document.registraction.gender[2].value
+
+            }
         //********************************************************************************************
 
-        console.log(document.registraction.city.value)
+        console.log(document.registraction.city)
+        let city=document.registraction.city
         if(document.registraction.city.value =="0"){
 
             console.log("Please select city")
@@ -78,6 +115,21 @@
             cityMessage.innerHTML="Please select city"
             cityMessage.style.color="blue"
         }
+
+          
+        //****************************************************************************************
+        let registraction ={
+            'firstName' : firstName.value,
+            'password' :password.value,
+            'email':email.value,
+            'gender' : genderData ,
+            "city" : city.value
+        }
+       console.log(registraction)
+       console.log(JSON.stringify(registraction))
+       let registractionString =JSON.stringify(registraction)
+
+       localStorage.setItem("noncsr",registractionString)
 
         //*********************************************************************************************
 
@@ -96,13 +148,21 @@
 
         // Create image dynamically
 
+        //docuament
 
-
-
-
-
+       
 
         }
+       let tree={}
+
+       tree ={
+         'name': 'Banyan',
+         'lifespan' : 500
+       }
+
+       console.log(tree)
+       
+
     </script>
 </head>
 <body>
@@ -125,22 +185,32 @@
         <br><br>
 
         <div>
+            <lable>Enter Email id</lable>
+            <input type="email" name="email" id="email">
+            <div id="emailMassage"></div>
+        </div>
+        <br>
+       
+
+        <div>
             <lable>Select Gender</lable>
-            <input type="radio" name="gender" id="gender">male
-            <input type="radio" name="gender" id="gender">female
-            <input type="radio" name="gender" id="gender">Others
+            <input type="radio" name="gender" id="gender" value="male">male
+            <input type="radio" name="gender" id="gender" value="female">female
+            <input type="radio" name="gender" id="gender" value="others">Others
             <div id="genderMessage"></div>
         </div>
         <br>
         <diV>
 
+          
+
 
             
             <lable>SELECT CITY</lable>
             <select name="city" id="city">
-                <option value="0"   id="city">----select city----</option>
-                <option  id="city">Banglore</option>
-                <option  id="city">Mysore</option>
+                <option value="0" >----select city----</option>
+                <option  >Banglore</option>
+                <option  >Mysore</option>
             </select>
             <div id="cityMessage"></div>
         </diV>

@@ -25,7 +25,7 @@
             let PlayerName1=document.getElementById("PlayerName1")
            PlayerName1.innerHTML="Virat Kohli"
            PlayerName1.style.color="blue"
-
+            //*****    
            let image1=document.createElement("img")
             image1.src="virat-kohli.jpg"
             image1.style.width="200px"
@@ -33,23 +33,36 @@
             let lodingimage1=document.getElementById("lodingimage1")
             lodingimage1.appendChild(image1)
 
+            //*****
+            let paragaraph =document.createElement("p")
+            let text=document.createTextNode("Virat Kohli Number one batsman")
+            paragaraph.appendChild(text)
+            console.log(paragaraph)
+            let main=document.getElementById("main")
+            main.appendChild(paragaraph)
          
-
-
-
 
         }
         function PlayerName2(){
             let PlayerName2=document.getElementById("PlayerName2")
            PlayerName2.innerHTML="ROHITH SHARMA"
            PlayerName2.style.color="red"
-
+            //*******
            let image=document.createElement("img")
            image.src="Rohit.jfif"
            image.style.width="200px"
            document.body.appendChild(image)
            let lodingimage2=document.getElementById("lodingimage2")
            lodingimage2.appendChild(image)
+           //***********
+            let paragaraph=document.createElement("p")
+            let text=document.createTextNode("Rohit Sharama second palayer of T20 batsman")
+            paragaraph.appendChild(text)
+            console.log(paragaraph)
+            let main=document.getElementById("main2")
+            main.appendChild(paragaraph)
+
+
 
 
         }
@@ -65,6 +78,9 @@
            document.body.appendChild(image)
            let lodingimage3=document.getElementById("lodingimage3")
            lodingimage3.appendChild(image)
+
+         //  let paragaraph=document.createElement("p")
+         //  let text =document.
 
 
          
@@ -192,19 +208,7 @@
 
         }
 
-        function addition(){
-        console.log("Adding Number")
-        var Number1 =document.getElementById("num1") 
-        var Number2 =document.getElementById("num2") 
-        console.log(Number1.value)
-        console.log(Number2.value)
-        var result =parseInt(Number1.value)+parseInt(Number2.value)
-        console.log(result)
-        var additionResult = document.getElementById("additionResult");
-        additionResult.innerHTML=result
-
-        }
-
+    
     </script>
 </head>
 <body>
@@ -216,10 +220,12 @@
     <button onclick="PlayerName1()">Player Name 1</button>
     <div id="PlayerName1"></div>
     <div id="lodingimage1"></div>
+    <div id="main"></div>
 
     <button onclick="PlayerName2()">Player Name 2</button>
     <div id="PlayerName2"></div>
     <div id="lodingimage2"></div>
+    <div id="main2"></div>
 
     <button onclick="PlayerName3()">Player Name 3</button>
     <div id="PlayerName3"></div>
@@ -261,44 +267,6 @@
 
     <br><br>
 
-
-
-
-
-
-
-
-
-
-
-
-<form>
-    <div>
-        <label>Enter name</label>
-        <input type="text" id="name">
-
-    </div>
-
-    <button onmouseover="detailes()">Submit</button>
-    <div id="detail"></div>
-</form> 
-<br><br>
-
-  <form>
-    <div>
-        <label>Enter Number1</label>
-        <input type="text" id="num1">
-
-    </div>
-
-    <div>
-        <lable>Enter number2</lable>
-        <input type="text" id="num2">
-
-    </div>
-
-    <button onclick="addition()">Addition</button>
-  </form>
   
 </body>
 </html>

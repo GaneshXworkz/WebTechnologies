@@ -4,78 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css1.css">
     <title>Document</title>
+
+
+
 </head>
 <body>
 
-    <form>
-    <div>
-        <label>Enter Email</label>
+    <div class="container col-12 col-sm-6 col-md-3 shadow-lg p-4 mb-4 bg-white mx-auto d-block border border-primary">
+    <form name="" action="" method=""onsubmit="logIn()" >
+    <div class="form-group">
+       
         <input type="email" placeholder="Enter Email" name="email" 
         id="email">
         <div id="emailMassage"></div>
     </div><br>
 
-    <div>
-        <label>Enter Passwaord</label>
+    <div class="form-group">
+       
         <input type="password" placeholder="Enter password" name="password"
         id="password">
 
     </div><br>
 
-    <button type="button" onclick="logIn()">LoG In</button>
+    <div>
+    <button calss="btn btn-primary " type="button" onclick="logIn()">LoG In</button>
     <div id="LoginMassage"></div>
+</div>
 </form>
-
-<script>
-    function logIn(){
-
-
-
-
-    //*******************************************************************
-
-        console.log("calling login")
-        let email=document.getElementById("email")
-        let password=document.getElementById("password")
-        console.log(email.value)
-        console.log(password.value)
-        
-     let register  = localStorage.getItem("noncsr")
-     console.log(register)
-     console.log(register.email)
-     // JSON.parse  is useed to conver string to object
-    let registerObject =JSON.parse(register)
-    console.log(registerObject)
-    console.log(registerObject.email)
-    console.log(registerObject.password)
-
-    if(email.value==registerObject.email && password.value==registerObject.password)
-    {
-
-      
-                let message =document.getElementById("LoginMassage")
-                message.innerHTML ="LogIn is Success"
-                message.style.color ='green'
-                window.location.href="https://facebook.com"
-
-    } 
-    else
-    {
-
-        let message =document.getElementById("LoginMassage")
-                message.innerHTML =" Incorrect Email Or Password  "
-                message.style.color ='Red'
-
-
-
-    }   
-
-
-
-
-    }
-</script>
+</div>
+<!--EXTERANAL JAVA SCRIPT LINKING TO HTML-->
+<script src="Login.js"></script>
 
     
 </body>

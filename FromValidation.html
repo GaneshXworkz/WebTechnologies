@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css1.css">
     <title>FormValidation</title>
 
     <script>
@@ -33,7 +34,8 @@
                 console.log(email.value)
                 console.log(email.value.length)
 
-                if(email.value == ""){
+                if(email.value == "")
+                {
                 console.log("Please enter Firstname")
                 let message =document.getElementById("emailMassage")
                 message.innerHTML ="Please enter emailId"
@@ -57,7 +59,8 @@
                 message.style.color='blue'
 
             }
-           else if(password.value.length <8){
+           else if(password.value.length <8)
+           {
                 console.log("please enter password")
                 let message =document.getElementById("passwordMessage")
                 message.innerHTML=" password must be 8 charcter"
@@ -94,11 +97,13 @@
             {
                 genderData=document.registraction.gender[0].value
             }
+
             else if(document.registraction.gender[1].checked ==true)
             {
                 genderData=document.registraction.gender[1].value
   
             }
+
             else if(document.registraction.gender[2].checked ==true)
             {
                 genderData=document.registraction.gender[2].value
@@ -149,18 +154,65 @@
         // Create image dynamically
 
         //docuament
-
-       
-
         }
-       let tree={}
+    //*********************************************************** 
+        function validateFirstName(){
 
-       tree ={
-         'name': 'Banyan',
-         'lifespan' : 500
-       }
+console.log("calling validate")
+let firstName = document.getElementById("firstName")
+let message = document.getElementById("firstNameMassage")
+message.innerHTML =""
+console.log(firstName.value)
+console.log(firstName.value.length)
 
-       console.log(tree)
+if(firstName.value == ""){
+    console.log("Please enter Firstname")
+    let message =document.getElementById("firstNameMassage")
+    message.innerHTML ="Please enter Firstname"
+    message.style.color ='red'
+
+}
+if(firstName.value.length =="0"){
+    console.log("please enter FirstName")
+
+}
+
+//***********************************************************************
+
+}
+
+ function validatePassword(){
+  let firstNameFlag =   validateFirstName()
+
+    let password = document.getElementById("password")
+    let message = document.getElementById("passwordMessage")
+    message.innerHTML =""
+
+
+            console.log(password.value)
+            console.log(password.value.length)
+
+            if(password.value == ""){
+                console.log("please Enter password")
+                let message =document.getElementById("passwordMessage")
+                message.innerHTML="please Enter password"
+                message.style.color='blue'
+
+            }
+           else if(password.value.length <8)
+           {
+                console.log("please enter password")
+                let message =document.getElementById("passwordMessage")
+                message.innerHTML=" password must be 8 charcter"
+                message.style.color='blue'
+            }
+            else if(password.value.length >9){
+                console.log("please enter password")
+                let message =document.getElementById("passwordMessage")
+                message.innerHTML="Passwaord is too long"
+                message.style.color='blue'
+            }
+ }
        
 
     </script>
@@ -168,18 +220,19 @@
 <body>
 
 
+    <div class="container col-12 col-sm-6 col-md-3 shadow-lg p-4 mb-4 bg-white mx-auto d-block border border-primary">
     <form name="registraction">
 
-        <div>
+        <div calss="form-group">
             <label>Enter FirstName </label>
-            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="firstName" id="firstName" onblur="validateFirstName()" onkeydown="validateFirstName()">
             <div id="firstNameMassage"></div>
         </div>
         <br><br>
 
         <div>
             <label>Enter Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" onfocus="validateFirstName()" onblur="validatePassword()" onkeydown="validatePassword()" >
             <div id="passwordMessage"></div>
         </div>
         <br><br>
@@ -219,7 +272,7 @@
        <br>
         <button type="button" onclick="validate()">Register</button>
     </form>
-
+</div>
 
    <br>
 

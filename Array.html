@@ -88,6 +88,12 @@
         console.log(trees)
         console.log('************************************')
 
+        console.log("-------------------------------")
+        arr3.splice(1,2)//remove element from 1 index till
+         
+
+        console.log("-------------------------------")
+
         //*******************************************************
 
         //interview Qustion
@@ -104,6 +110,25 @@
         //onblur event
 
        
+        //****************************************************************
+        //builtin object creation
+        Employee=new Object()
+        Employee.firstName='raj'
+        console.log(Employee.firstName)
+
+        //userDefined way of creating object
+        function student(name,id,city){
+            this.name=name
+            this.id=id
+            this.city=city
+        }
+
+        let ram =new student("ram",1,"Banglore")
+        console.log(ram.name)
+        console.log(ram.city)
+        console.log(ram.id)
+
+        //After assignment 
 
     </script>
 

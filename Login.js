@@ -27,7 +27,7 @@ function logIn(){
                 let message =document.getElementById("LoginMassage")
                 message.innerHTML ="LogIn is Success"
                 message.style.color ='green'
-                window.location.href="https://facebook.com"
+                //window.location.href="https://facebook.com"
 
     } 
     else
@@ -42,8 +42,15 @@ function logIn(){
 
 
     }   
-
-
-
+    
 
     }
+
+    function dispalyDateonclick(){
+        let date =new Date()
+        console.log(date)
+        console.log(date.getTime())
+        document.getElementById("displayDate").innerHTML=date
+    }
+
+    //chart.js

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <link rel="stylesheet" href="New.css">
+    <link rel="stylesheet" href="Css1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+    form{
+        border: 2px solid black;
+        color: rgb(226, 139, 26);
+        margin: auto;
+         width:1500px;
+    }
+    .nbar{
+        padding: 15px;
+        text-align: center;
+        background-color: white;
+    }
+    .nbar a:hover{
+        background-color: #ddd;
+        color: black;
+    }
+
+    .nbar a {
+        float: left;
+        display: block;
+        /* color: #f2f2f2; */
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    
+</style>
+<style>
+  
+</style>
+      
+
+</head>
+<body>
+<form action="">
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="chart.png" alt="" height="40px" width="60px"></a>
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">DashBoard </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SITE INFORMATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LDB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SMART LIGHTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">GATE WAY</a>
+          </li>
+      
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              More
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+     <br>
+    <div class="nb">
+         
+            <button class="btn"><i class="fa fa-home"></i>Home</button>
+            <a href="https://instagram.com/moon_manu07?igshid=NmQ2ZmYxZjA=" class="fa fa-instagram"></a>
+            <a href="linkedin.com/in/manohara-a-b-16300a254" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+
+        
+         
+    </div>
+    <br>
+    <br>
+    <div>
+
+    
+    <div class="row" id="r">
+        
+        <div class="col ">
+            <div class="rect"> 
+                <img src="chart.png" alt="" height="50px" width="50px"  class="rounded-circle">
+                <p>Zone   1  </p>
+            <hr>
+            <p> Cluster : 1   <span style="float: right;"> Area : 0 </span> </p>
+             
+            </div>
+        </div>
+
+    <div class="col ">
+        <div class="rect"> 
+            <img src="chart.png" alt="" height="50px" width="50px"  class="rounded-circle">
+            <p>LDB   8  <span style="float: right;"> Offline : 0</span> </p>
+            <hr>
+            <p> Offline : 8  <span style="float: right;"> Never Seen : 0 </span> </p>
+         </div>
+    </div>
+    <div class="col ">
+        <div class="rect"> 
+            <img src="chart.png" alt="" height="50px" width="50px"  class="rounded-circle">
+            <p>Gate Way   0  <span style="float: right;"> Offline : 0</span></p>
+            <hr>
+            <p> Offline : 0  <span style="float: right;"> Never Seen : 0 </span> </p>
+        </div>
+    </div>
+    <div class="col ">
+        <div class="rect"> 
+            <img src="chart.png" alt="" height="50px" width="50px"  class="rounded-circle">
+            <p>Smart Light   8 <span style="float: right;"> Offline : 0</span> </p>
+            <hr>
+            <p>  Offline : 8  <span style="float: right;"> Never Seen : 0 </span> </p>
+         </div>
+    </div>
+  </div>
+</div>
+<br>
+<div> 
+    <div class="row">
+            <div class="col">
+                <div class="rectlg">
+                    <canvas id="myChart"></canvas>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+                <script>
+                    const ctx = document.getElementById('myChart');
+                
+                    new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                        label: 'Cluster vs LDB Count',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                        }
+                    }
+                    });
+                </script>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="rectlg">
+                    <p>Cluster vs LIght Count</p>
+                    <canvas id="myChart2"></canvas>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script>
+                        const ctxm = document.getElementById('myChart2');
+                    
+                        new Chart(ctxm, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            datasets: [{
+                            label: 'Cluster vs Light Count',
+                            data: [16, 24, 13, 35, 42, 33],
+                            borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                            }
+                        }
+                        });
+                    </script>
+                    
+                </div>
+
+            </div>
+    </div>
+</div>
+<br>
+
+<div class="spl">
+<div class="row">
+    <div class="col">
+        <label>Option </label>
+        <select name="Opt">
+            <option >Life Time </option>  
+              <option >2 Years </option>
+              <option >5 Years </option>
+              <option >7 Years </option>
+              <option >10 Years </option>
+                          
+           </select> <span id="cmsg"></span>
+    </div>
+    <div class="col">  
+       <label>Zone </label>
+        <select name="Zone">
+            <option >Time ZOne</option>  
+              <option > Indian  Asia UTC +5:30 </option>
+              <option >Lima  Military UTC +11</option>
+              <option > Singapore 	Asia UTC +8 </option>
+              <option >  North America UTC -7:00 / -6:00 </option>
+              <option >Central  Australia  UTC +9:30 </option>
+                           
+           </select> 
+    </div>
+
+    <div class="col">  
+        <label>Cluster </label>
+         <select name="Cluster">
+             <option >Test Cluster</option>  
+               <option >Cluster 1 </option>
+               <option >Cluster 2 </option>
+               <option >Cluster 3 </option>
+               <option >Cluster 4 </option>
+               <option >Cluster 5 </option>
+                             
+            </select> 
+     </div>
+     
+     <div class="col">  
+        <input type="text" placeholder="Show"  >
+        
+     </div>
+     
+</div>
+</div> 
+<br>
+
+<div class="row">
+    <div class="col">
+        <div class="rectlg">
+            <p>Cluster vs GateWay</p>
+            <canvas id="myChartq"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const ctxe = document.getElementById('myChartq');
+        
+                var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+                var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+                new Chart("myChartq", {
+                type: "line",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValues
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                    yAxes: [{ticks: {min: 6, max:16}}],
+                    }
+                }
+                });
+               
+        </script>
+        </div>
+
+    </div>
+
+    <div class="col">
+        <div class="rectlg">
+            <p>LDB Energy Consumption</p>
+            <canvas id="myChartw"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctxr = document.getElementById('myChartw');
+                var xyValues = [
+                                {x:50, y:7},
+                                {x:60, y:8},
+                                {x:70, y:8},
+                                {x:80, y:9},
+                                {x:90, y:9},
+                                {x:100, y:9},
+                                {x:110, y:10},
+                                {x:120, y:11},
+                                {x:130, y:14},
+                                {x:140, y:14},
+                                {x:150, y:15}
+                                ];
+                new Chart(ctxr, {
+                type: 'scatter',
+                
+                        data: {
+                            datasets: [{
+                            pointRadius: 4,
+                            pointBackgroundColor: "rgb(0,0,255)",
+                            data: xyValues
+                            }]
+                        },
+                        options: {
+                            legend: {display: false},
+                            scales: {
+                            xAxes: [{ticks: {min: 40, max:160}}],
+                            yAxes: [{ticks: {min: 6, max:16}}],
+                            }
+                        }
+                        });
+            </script>
+            
+        </div>
+
+    </div>
+</div>
+</div><br>
+
+<div class="spl">
+    <div class="row">
+        <div class="col">
+            <label>LDB </label>
+            <select name="ldb">
+                <option >LDB </option>  
+                  <option >Null </option>
+                  <option >Null </option>
+                  <option >Null </option>
+                  <option >Null </option>
+                  <option >Null </option>
+                             
+               </select>
+        </div>
+        <div class="col">  
+           <label>Smart Light </label>
+            <select name="smlg">
+                <option >Smart Light</option>  
+                  <option >Null </option>
+                  <option >Null </option>
+                  <option >Null </option>
+                  <option >Null </option>
+                  <option >Null </option>
+                                
+               </select> 
+        </div>
+    
+        <div class="col">  
+            <label>Gateway </label>
+             <select name="Gateway">
+                 <option >Gateway</option>  
+                   <option >Null </option>
+                   <option >Null </option>
+                   <option >Null </option>
+                   <option >Null </option>
+                   <option >Null </option>
+                                
+                </select> 
+         </div>
+         
+         <div class="col">  
+            <input type="text" placeholder="Show"  >
+            
+         </div>
+         
+    </div>
+    </div> 
+<br>
+<div class="row">
+    <div class="col">
+        <div class="rectlg">
+            <p>LDB on Hours</p>
+            <canvas id="myCharty"></canvas>
+            <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+        <script>
+            const ctxt = document.getElementById('myCharty');
+        
+            var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+                    new Chart("myCharty", {
+                    type: "line",
+                    data: {
+                        labels: xValues,
+                        datasets: [{ 
+                        data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                        borderColor: "red",
+                        fill: false
+                        }, { 
+                        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                        borderColor: "green",
+                        fill: false
+                        }, { 
+                        data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                        borderColor: "blue",
+                        fill: false
+                        }]
+                    },
+                    options: {
+                        legend: {display: false}
+                    }
+                    });
+               
+        </script>
+        </div>
+
+    </div>
+
+    <div class="col">
+        <div class="rectlg">
+            <p>Gateway/ Area </p>
+            <canvas id="myChartt"></canvas>
+            <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+            <script>
+                const ctxy = document.getElementById('myChartt');
+                var xValues = [];
+                    var yValues = [];
+                    generateData("Math.sin(x)", 0, 10, 0.5);
+
+                    new Chart("myChartt", {
+                    type: "line",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                        fill: false,
+                        pointRadius: 2,
+                        borderColor: "rgba(0,0,255,0.5)",
+                        data: yValues
+                        }]
+                    },    
+                    options: {
+                        legend: {display: false},
+                        title: {
+                        display: true,
+                        text: "y = sin(x)",
+                        fontSize: 16
+                        }
+                    }
+                    });
+                    function generateData(value, i1, i2, step = 1) {
+                    for (let x = i1; x <= i2; x += step) {
+                        yValues.push(eval(value));
+                        xValues.push(x);
+                    }
+                    }
+            </script>
+            
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+      
+</form>
+
+
+
+       
+</body>
+</html>
